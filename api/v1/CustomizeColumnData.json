@@ -1,0 +1,46 @@
+[
+  {
+    "text": "Id",
+    "id": 1
+  },
+  {
+    "text": "Message",
+    "id": 2
+  },
+  {
+    "text": "Borrower Name",
+    "id": 3
+  },
+  {
+    "text": "Loan Officer",
+    "id": 4
+  },
+  {
+    "text": "Co-Borrower Name",
+    "id": 5
+  },
+  {
+    "text": "Property",
+    "id": 6
+  },
+  {
+    "text": "Loan Processor",
+    "id": 7
+  },
+  {
+    "text": "Loan Amount",
+    "id": 8
+  },
+  {
+    "text": "Lock & Request Status",
+    "id": 9
+  },
+  {
+    "text": "Subject Property State",
+    "id": 10
+  },
+  {
+    "text": "Subject Property City",
+    "id": 11
+  }
+]

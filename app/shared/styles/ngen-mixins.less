@@ -1,0 +1,26 @@
+//TODO: Identify common mixins that share across ngen-app & module level
+
+/*Context menu styling*/
+.ngen-context-menu {
+  border: 1px solid #ccc;
+  min-width: 162px;
+}
+
+.LineHeight (@lheight) {
+  line-height: @lheight;
+}
+
+.ngen-dropdown-focus {
+  border-color: @blue-light !important;
+  background: -moz-linear-gradient(top,@ghost-light,@blue-sky) !important;
+  background: -ms-linear-gradient(top,@ghost-light,@blue-sky) !important;
+  background: -o-linear-gradient(top,@ghost-light,@blue-sky) !important;
+  background: -webkit-linear-gradient(top,@ghost-light,@blue-sky) !important;
+}
+
+.drag-drop-filter-active {
+  cursor: move;
+  background-color: @white;
+  border: 2px solid @lightBlueBorder;
+  box-shadow: 7px 8px 2px 0px rgba(0, 0, 0, 0.05);
+}

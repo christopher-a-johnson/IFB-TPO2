@@ -1,0 +1,41 @@
+﻿[
+    {
+        "columns": [
+          { "field": "Name", "width": 200, "title": "Form Name" },
+          { "field": "Description", "title": "Description", "freeze": false },
+          { "field": "Enabled", "title": "Enabled" },
+          { "field": "ModifiedBy", "title": "Modified By" },
+          { "field": "ModifiedDate", "title": "Date Modified" },
+          { "field": "Id", "hidden": true }
+        ],
+        "schema": {
+            "id": "Id",
+            "fields": [
+                {
+                    "field": "Id",
+                    "params": { "editable": false, "nullable": false }
+                },
+                {
+                    "field": "Name",
+                    "params": { "type": "string" }
+                },
+                {
+                    "field": "Description",
+                    "params": { "type": "string" }
+                },
+                {
+                    "field": "Enabled",
+                    "params": { "type": "boolean" }
+                },
+                {
+                    "field": "ModifiedBy",
+                    "params": { "type": "string" }
+                },
+                {
+                    "field": "ModifiedDate",
+                    "params": { "type": "date" }
+                }
+            ]
+        }
+    }
+]

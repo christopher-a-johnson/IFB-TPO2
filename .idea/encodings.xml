@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/app/app.module.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/admin/inputformbuilder/controllers/tests/formbuilder-controller_test.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/pipeline/pipeline.module.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/shared/services/errorHandling.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gulpfile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/karma.conf.js" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

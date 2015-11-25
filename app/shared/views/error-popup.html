@@ -1,0 +1,20 @@
+<div class="ngen-popup-content-container ngen-message-popup" ngen-key-navigation close-on-escapekey-action="true">
+  <div class="error-window">
+    <!--popup-content-body//-->
+    <div class="popup-content-body">
+      <div ng-switch="vm.popupIcon">
+        <div ng-switch-when="Erroricon" class="ngen-pull-left dwi dwi-error-32x32 ngen-popup-icon"></div>
+        <div ng-switch-default></div>
+      </div>
+      <div class="ngen-popup-text ngen-pull-left">
+        <span class="ng-binding ngen-pull-left ngen-vertical-middle">{{vm.message}}</span>
+      </div>
+    </div>
+
+    <!--popup-content-footer//-->
+    <div class="popup-content-footer">
+      <button class="k-button" type="button" ng-click="vm.errorModalOkClick()" tabindex="1">OK</button>
+    </div>
+  </div>
+
+</div>

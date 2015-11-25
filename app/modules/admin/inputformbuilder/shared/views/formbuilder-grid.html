@@ -1,0 +1,74 @@
+<div>
+  <div id="ngen-formbuilder-grid"
+       kendo-grid="fbGridCtrl.formBuilderGrid"
+       k-options="fbGridCtrl.formbuilderGridOptions"
+       k-on-change="fbGridCtrl.getGridChange(dataItem)"
+       k-rebind="fbGridCtrl.formBuilderGridData"
+       k-ng-delay="fbGridCtrl.formBuilderGridData"
+       formbuilder-grid-tooltip
+       formbuilder-grid-highlight
+       min-filter-length="fbGridCtrl.minFilterLength"
+       exclude-cols="fbGridCtrl.excludeCols"
+       filter-text="fbGridCtrl.filterText"></div>
+
+
+  <script id="formListTooltip" type="text/x-kendo-template">
+    <div id="listTooltipActions">
+      <input id="previewButton" type="button" onclick="previewForm();" value="Preview"/>
+      <input id="quickEditButton" type="button" onclick="window.IFB_NAMESPACE.KendoInteraction.Grid.editRow()"
+             value="Quick Edit"/>
+      <input id="duplicateButton" type="button" onclick="window.IFB_NAMESPACE.KendoInteraction.Grid.addRow();"
+             value="Duplicate"/>
+      #if(window.IFB_NAMESPACE.KendoInteraction.Grid.getFormEnabled() === false) {
+      #<input type="button" onclick="window.IFB_NAMESPACE.KendoInteraction.Grid.deleteRow()" value="Delete"/>#
+      }else{
+      #<input type="button" onclick="deleteForm();" value="Delete" disabled="disabled"/>#
+      }#
+      <input id="exportButton" type="button" onclick="exportForm()" value="Export"/>
+    </div>
+  </script>
+
+  <script id="assetLibImageTooltip" type="text/x-kendo-template">
+    <div id="assetImageTooltipActions">
+      <div class="div-edit-asset" onclick="editAsset()">
+        <label class="action-label">Edit</label>
+      </div>
+
+      <div class="div-delete-asset" onclick="deleteAsset()">
+        <label class="action-label">Delete</label>
+      </div>
+    </div>
+  </script>
+
+  <script id="assetLibTooltip" type="text/x-kendo-template">
+    <div id="assetTooltipActions">
+      <div class="div-edit-asset" onclick="editAsset()">
+        <label class="action-label">Edit</label>
+      </div>
+
+      <div class="div-delete-asset" onclick="deleteAsset()">
+        <label class="action-label">Delete</label>
+      </div>
+
+      <div class="div-duplicate-asset">
+        <label class="action-duplicate-label">Duplicate</label>
+      </div>
+    </div>
+  </script>
+
+  <script id="assetLibStylesTooltip" type="text/x-kendo-template">
+    <div id="assetStyleTooltipActions">
+      <div class="div-edit-asset" onclick="editAsset()">
+        <label class="action-label">Edit</label>
+      </div>
+
+      <div class="div-delete-asset" onclick="deleteAsset()">
+        <label class="action-label">Delete</label>
+      </div>
+
+      <div class="div-duplicate-asset" onclick="window.IFB_NAMESPACE.KendoInteraction.Grid.addRow();">
+        <label class="action-duplicate-label">Duplicate</label>
+      </div>
+    </div>
+  </script>
+</div>

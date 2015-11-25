@@ -1,0 +1,8 @@
+[
+  {
+    "FirstName":    "Admin",
+    "LastName":     "Dev",
+    "AccessMode":   "ReadWrite",
+    "DuplicateLoan":  true
+  }
+]

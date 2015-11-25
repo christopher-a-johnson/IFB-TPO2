@@ -1,0 +1,14 @@
+.dwi {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../images/ngen-sprite.png);
+}
+
+{{#items}}
+.dwi-{{name}} {
+  background-position: {{px.offset_x}} {{px.offset_y}};
+  width: {{px.width}};
+  height: {{px.height}};
+}
+{{/items}}

@@ -1,0 +1,21 @@
+<div class="ngen-popup-content-container ngen-message-popup" ngen-key-navigation close-on-escapekey-action="true">
+  <div class="confirmation-window">
+
+    <!--popup-content-body//-->
+    <div class="popup-content-body">
+      {{vm.message}}
+    </div>
+
+    <!--popup-content-footer//-->
+    <div class="popup-content-footer">
+
+
+      <button class="k-button" type="button" ng-click="vm.modalNoClick()" is-default-enterkey-action="true" tabindex="1">
+        {{vm.Disapprove }}
+      </button>
+      <button class="k-button" type="button" ng-click="vm.modalYesClick()" tabindex="2">{{vm.Approve}}</button>
+    </div>
+  </div>
+
+</div>
+

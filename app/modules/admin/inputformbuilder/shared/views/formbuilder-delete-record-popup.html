@@ -1,0 +1,36 @@
+<div class="ngen-popup-content-container" ngen-key-navigation close-on-escapekey-action="true">
+  <div class="assets-columns-window">
+    <span class="used-frm-heading"> The file you are about to delete is associated with the forms below.</span>
+
+    <div class="ngen-bordered-container ngen-full-width">
+      <!--popup-content-header//-->
+      <div class="popup-content-header section-header">
+        <span class="pull-left">Form Names</span>
+      </div>
+      <!--popup-content-body//-->
+      <div class="popup-content-body ngen-full-width">
+        <div id="formsListViewContainer" ng-class="{'forms-list-view-container-for-style' : vm.isStylePage}">
+          <ul id="formListView" kendo-list-view k-options="vm.formListViewOptions"
+              class="listView">
+            <li k-template class="form_title">{{ dataItem.name }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="/app/images/warning_2.png" class="used-frm-warning-img">
+        <span class="used-frm-warning">{{vm.WarningMsg}}</span>
+    </div>
+    <!--popup-content-footer//-->
+    <div class="popup-content-footer">
+      <button type="button" class="k-button" ng-click="vm.deleteRecord()" tabindex="2">{{vm.Disapprove}}
+      </button>
+      <button type="button" class="k-button" ng-click="vm.cancelDeleteOperation()" tabindex="1">{{vm.Approve}}</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+

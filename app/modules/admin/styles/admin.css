@@ -1,0 +1,96 @@
+.ngen-admin-panelbar {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  float: left;
+  height: 100%;
+}
+
+.ngen-admin-detail {
+  display: inline-block;
+  vertical-align: top;
+  width: 78%;
+  overflow: auto;
+  height: 100%;
+}
+
+.ngen-admin-detail.fbpage{
+    margin-left: 0.5%;
+}
+
+.ngen-admin-fl-import-button {
+  float: right;
+}
+
+.ngen-admin-spacer {
+  margin-bottom: 15px;
+}
+
+.quick-edit-template .input-width {
+  width: 98%;
+}
+
+.quick-edit-template .edit-label {
+  float: left;
+  clear: both;
+  width: 30%;
+  padding: 1.2em 0 0.2em;
+  margin-left: 2%;
+  text-align: left;
+}
+
+.quick-edit-template .edit-text {
+  clear: both;
+  margin-left: 2%;
+}
+
+.ngen-right-button {
+  margin-right: 15px;
+  float: right;
+}
+
+.ngen-separator-item {
+  border-top: 1px solid #cccccc;
+  display: inline-block;
+  width: 100%;
+}
+
+.ngen-message-popup .ngen-popup-message {
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  padding: 14px 20px;
+}
+
+#standardFormsListContainer, #formsListViewContainer {
+  height: 307px;
+  width: auto;
+  border: 1px solid #ccc;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 8px;
+}
+
+.forms-list-view-container-for-style {
+  height: 285px !important;
+}
+
+.listView {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.listView li {
+  margin: 0;
+  padding: 3px;
+  height: 30px;
+  line-height: 32px;
+  overflow: hidden;
+}
+
+.form_title:first-letter {
+  text-transform: uppercase
+}
+
+

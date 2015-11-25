@@ -1,0 +1,22 @@
+<div class="ngen-popup-content-container ngen-message-popup" ngen-key-navigation close-on-escapekey-action="true">
+  <div class="warning-window">
+
+    <!--popup-content-body//-->
+    <div class="popup-content-body">
+      <div ng-switch="vm.popupIcon">
+        <div ng-switch-when="Infoicon" class="ngen-pull-left dwi dwi-info-32x32 ngen-popup-icon"></div>
+        <div ng-switch-when="Warningicon" class="ngen-pull-left dwi dwi-warning-32x32 ngen-popup-icon"></div>
+        <div ng-switch-default></div>
+      </div>
+      <div ng-class="vm.popupIcon == 'Infoicon' || 'Warningicon' ? 'ngen-popup-text-icon' : 'ngen-popup-text' "
+           class="ngen-pull-left">
+        <span class="ng-binding ngen-pull-left ngen-vertical-middle">{{vm.message}}</span>
+      </div>
+    </div>
+
+    <!--popup-content-footer//-->
+    <div class="popup-content-footer">
+      <button class="k-button ngen-pull-right" ng-click="vm.warningModalOkClick()" tabindex="1">OK</button>
+    </div>
+  </div>
+</div>

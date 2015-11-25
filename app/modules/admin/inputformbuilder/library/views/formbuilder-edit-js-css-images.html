@@ -1,0 +1,93 @@
+<div  class="div-main-container">
+  <section class="form-properties-section">
+    <div class="div-back-to-list">
+    <h3>
+      <a href="#" class="k-link k-linkBack" ng-click="vm.showList(0)">&lt;&lt; Back to List</a>
+    </h3>
+      <div class="div-edit-style-button" ng-show="vm.showButton">
+        <input type="button" id="btnOverwrite" value="Overwrite with Global" class="buttonJS"/>
+        <input type="button" id="btnOpen" value="Open in CSS Editor" class="buttonJS"/>
+      </div>
+      </div>
+    <div  class="img-wrapper-panel">
+    <div class="img-wrapper"  ng-show="vm.isImage">
+      <div class="div-image-container"></div>
+    </div>
+    <div  class="div-title-desc-container">
+      <div>
+        <label>Title:</label>
+      </div>
+      <div class="div-name-text-container" >
+        <input type="text" id="txtName" placeholder="Add File Name" ng-model="vm.fileName" class="txt-file-name"></div>
+      <div class="div-desc-lbl-container">
+        <label>Description</label>
+      </div>
+      <div>
+        <textarea id="txtDescription" placeholder="Add Description" class="textAreaStyle" ng-model="vm.description" > </textarea>
+      </div>
+    </div>
+    <div class="div-right-panel">
+      <div class="div-switch-container">
+                    <span id="formEnabledField" onclick = "window.IFB_NAMESPACE.JsInteraction.PropertyCollapseTextChange.changeSwitchContainerBorder()">
+                      <span class="span-enable-form">
+                        <label id="lblEnableForm">Public :</label></span>
+                        <input kendo-mobile-switch type="checkbox" name="formEnabled" id="formEnabled" class="input-switch-margin"
+                               k-off-label="'X'"
+                               k-on-label="'<div class=on-label-with-tick></div>'"
+                               title="Enable Form" k-ng-model="vm.formEnabled" value="{{ vm.formEnabled }}" />
+
+                      </span>
+      </div>
+      <div class="div-info-data"   >
+        <label>Modified By:</label>
+        <span class="span-data" ng-model="vm.lastModifiedBy">{{vm.lastModifiedBy}}</span>
+      </div>
+      <div class="div-info-data">
+        <label>Modified Date:</label>
+        <span class="span-data" ng-model="vm.lastModifiedDateTime">{{vm.lastModifiedDateTime}}</span>
+      </div>
+      <div class="div-info-data">
+        <label>{{vm.FileTypeText}}:</label>
+        <span class="span-data" ng-model="vm.imageType">{{vm.fileType}}</span>
+      </div>
+      <div class="div-info-data">
+        <label>File Size:</label>
+        <span class="span-data" ng-model="vm.fileSize">{{vm.fileSize}}</span>
+      </div>
+      <div class="div-info-data"  ng-show="vm.isImage" >
+        <label>Dimensions:</label>
+        <span class="span-data" ng-model="vm.dimensions">{{vm.dimensions}}</span>
+      </div>
+      <div class="div-info-data">
+        <label class="lbl-url">URL:</label>
+        <a class="imgUrlStyle" target="_blank" href="{{vm.url}}" ng-model="vm.url">{{vm.url}}</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="div-browse-button-container">
+      <div class="div-replace-file">
+        <span>Replace Image:</span>
+        <div class="file-upload btn btn-primary">
+          <span>Select File</span>
+          <input type="file" id="btnBrowse" class="input-upload">
+        </div>
+      </div>
+      <div class="div-close-save-button-container">
+        <input id="btnClose" type="button" ng-click="vm.showList(1)" class="btn-close" value="Cancel">
+        <input id="btnSave" type="button" class="btn-save-and-close" value="Save &amp; Close">
+      </div>
+    </div>
+  </section>
+  <div class="clearing"></div>
+  <div class="linkedForms">
+    <div class="linkedFormText">Linked Forms:</div>
+    <div id="ngen-formbuilder-EditJsGrid"
+         kendo-grid="vm.formBuilderEditJsGrid"
+         k-options="vm.formbuilderGridOptions"
+         k-rebind="vm.formBuilderGridData"
+         k-ng-delay="vm.formBuilderGridData"
+         class="k-grid k-widget">
+    </div>
+  </div>
+</div>

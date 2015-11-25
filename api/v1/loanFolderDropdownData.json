@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "My Pipeline"
+  },
+  {
+    "id": 2,
+    "title": "Your Pipeline"
+  },
+  {
+    "id": 3,
+    "title": "Their Pipeline"
+  },
+  {
+    "id": 4,
+    "title": "Awesome Pipeline"
+  },
+  {
+    "id": 5,
+    "title": "Crazy Pipeline"
+  },
+  {
+    "id": 6,
+    "title": "Trash"
+  }
+]

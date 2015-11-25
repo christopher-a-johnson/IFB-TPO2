@@ -1,0 +1,292 @@
+/* Temporary - pipeline grid filter row - search boxes styles - ganesh */
+.k-filter-row th {
+  padding: 2px 2px 1px 2px !important;
+  vertical-align: top;
+  .k-dropdown-wrap:before,
+  .k-numeric-wrap:before,
+  .k-picker-wrap:before {
+    height: 0;
+  }
+
+  .k-numeric-wrap {
+    height: 20px;
+    .k-input {
+      padding: 0;
+      height: 20px;
+      text-align: right;
+    }
+  }
+
+  .k-operator-hidden input {
+    width: 100% !important;
+    height: 22px;
+    float: left;
+    margin-left: 0;
+    border: 1px solid @gray;
+    box-sizing: border-box;
+  }
+  .k-dropdown-operator {
+    width: 22px !important;
+    margin: 1px 0 0 1px;
+  }
+  span {
+    .k-picker-wrap {
+      border: none;
+      height: 20px;
+      input {
+        text-align: right;
+      }
+      .k-i-calendar {
+        left: 3px;
+      }
+    }
+  }
+  input.k-textbox {
+    width: 100% !important;
+    height: 20px;
+    margin: 2px 0 0 0;
+    font-family: Arial;
+    padding: 0 0 0 0 !important;
+    top: -2px;
+    text-align: left;
+    border: none;
+  }
+  input {
+    width: 100%;
+    margin-left: 24px;
+    color: @black !important;
+    height: 16px;
+    font-family: Arial;
+    text-align: left;
+    box-shadow: none !important;
+  }
+  span.k-datepicker {
+    padding: 0 !important;
+    border: 1px solid @gray;
+  }
+  .k-picker, .k-filter-row th .k-picker-wrap {
+    height: 18px;
+    margin-left: 18px;
+  }
+  .k-picker-wrap input:not(.k-textbox) {
+    width: 100% !important;
+  }
+  .k-dropdown-operator .k-dropdown-wrap {
+    background-image: none !important;
+    padding: 0 !important;
+    border: none;
+  }
+  .k-dropdown-operator .k-select {
+    display: none !important;
+  }
+  .k-filtercell > .k-operator-hidden, .k-filtercell > span {
+    float: left;
+    width: 100%;
+    margin: 0;
+  }
+  .k-dropdown .k-dropdown-wrap {
+    .k-input, .k-select {
+      background-color: transparent !important;
+    }
+    &:hover {
+      .ngen-dropdown-focus;
+    }
+  }
+  .k-dropdown .k-dropdown-wrap.k-state-focused {
+    .ngen-dropdown-focus;
+  }
+}
+
+.k-grid-content td {
+  white-space: nowrap;
+}
+
+.k-grid-header th.k-header {
+  border-left-color: rgb(204, 204, 204) !important;
+}
+
+.k-dropdown-wrap.k-state-focused {
+  .ngen-dropdown-focus;
+}
+
+//Mixin
+.positionFilter {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.k-filtercell {
+  span {
+    .k-button {
+      .positionFilter;
+    }
+  }
+}
+
+.k-filter-row {
+  .k-dropdown-operator {
+    .positionFilter;
+  }
+}
+
+.pl-grid-row-adversestatus {
+  background-color: @pink;
+}
+
+.pl-grid-row-readonlystatus {
+  background-color: @silver-chalice;
+}
+
+/*arrow classes to eliminate text displacement on hover*/
+.k-grid-header {
+  th.k-header > .k-link  {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      .k-i-arrow-s {
+        margin-left: @margin5px;
+      }
+      .k-i-arrow-n {
+        margin-left: @margin5px;
+      }
+    }
+  }
+  th.k-header > .k-link  > .k-icon {
+    margin-left: 5px;
+  }
+
+  input {
+    display: inline-block;
+    float: right;
+  }
+
+}
+
+.pl-view-alert-count {
+  height: 12px;
+  width: 18px;
+  line-height: 12px;
+  background-color: @scarlet;
+  color: @white;
+  border: 1px solid @red-approx;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  font-weight: 700;
+  font-size: 11px;
+  box-shadow: inset 0 0 1px @sea-pink;
+  &:hover {
+    border: 1px solid @olive-light;
+  }
+}
+
+/*First <td> should alligned 10 px left  */
+.pipeline-grid-style div.k-grid-content table tr td:first-child {
+  padding: 0 0 0 10px;
+}
+
+.pipeline-grid-style div.k-grid-content table tr:last-child td {
+  border-bottom: @brdr1px @gray !important;
+}
+
+/*Every <td> should alligned 5 px left, white bottom border for each row NGENC-6127 */
+.pipeline-grid-style div.k-grid-content table td {
+  padding: 0 0 0 5px;
+  height: 18px;
+  line-height: 18px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border-bottom: @brdr1px @white-approx !important;
+}
+
+.pipeline-grid-style div.k-grid-content table td.text-right {
+  text-align: right;
+  padding: 0 5px 0 0;
+}
+
+.pipeline-grid-style div.k-pager-wrap.k-grid-pager.k-widget   {
+  padding: 0;
+}
+
+@media (max-height: 768px) {
+  .ngen-container {
+    min-width: 1008px;
+  }
+
+  .pipeline-grid-style div.k-grid-content {
+    min-height: 50px;
+  }
+}
+
+.fix-section-header {
+  height: 31px;
+  padding: 0 0 1px 0;
+}
+
+ul.k-menu {
+  li.dotted-separator {
+    height: 0;
+    border: @brdr1pxDotted;
+  }
+}
+
+/*Context menu header on hover and normal NGENC-6127*/
+.fix-section-header.k-first > .k-link {
+  cursor: default;
+  background-color: transparent;
+  background: -moz-linear-gradient(top, @yellow-header-1pc 1%, @yellow-header-40pc 40%, @yellow-header-60pc 60%, @yellow-header-100pc 100%);
+  background: -ms-linear-gradient(top, @yellow-header-1pc 1%,@yellow-header-40pc 40%,@yellow-header-60pc 60%, @yellow-header-100pc 100%);
+  background: -o-linear-gradient(top, @yellow-header-1pc 1%,@yellow-header-40pc 40%,@yellow-header-60pc 60%, @yellow-header-100pc 100%);
+  background: linear-gradient(top, @yellow-header-1pc 1%,@yellow-header-40pc 40%,@yellow-header-60pc 60%, @yellow-header-100pc 100%);
+  border: @brdr1px @peach-cream;
+  padding: 0 8px 0 0 !important;
+  &:hover {
+    cursor: default;
+    background: -moz-linear-gradient(top, @yellow-header-1pc 1%, @yellow-header-40pc 40%, @yellow-header-60pc 60%, @yellow-header-100pc 100%);
+    background: -ms-linear-gradient(top, @yellow-header-1pc 1%, @yellow-header-40pc 40%, @yellow-header-60pc 60%, @yellow-header-100pc 100%);
+    background: -o-linear-gradient(top, @yellow-header-1pc 1%, @yellow-header-40pc 40%, @yellow-header-60pc 60%, @yellow-header-100pc 100%);
+    background: linear-gradient(top, @yellow-header-1pc 1%, @yellow-header-40pc 40%, @yellow-header-60pc 60%, @yellow-header-100pc 100%);
+    box-shadow: none !important;
+    color: @black;
+    border: @brdr1px @peach-cream;
+  }
+}
+
+.fix-section-header.k-first > .k-link > .dwi {
+  margin: @margin2px @margin5px @margin5px @margin5px
+}
+
+.k-link > .dwi-email {
+  margin-right: @margin5px;
+
+}
+
+.fix-section-header.k-first > .k-link > .ng-binding {
+  line-height: @height30;
+}
+
+ul.k-menu {
+  border: @brdr1px @gray;
+}
+
+ul.k-menu li.k-separator {
+  border-width: @noBorder0;
+  background-color: @gray;
+  height: @height1;
+}
+
+.no-hover {
+  span {
+    cursor: default;
+  }
+  span:hover {
+    background-color: @white !important;
+    cursor: default;
+  }
+}
+
+.k-menu .k-item.no-hover .k-link:hover {
+  box-shadow: none !important;
+}
+

@@ -1,0 +1,32 @@
+/*** TODO: typos and few page layouts are still breaking ***/
+@import "../bower_components/bootstrap/less/variables.less";
+@import "../bower_components/bootstrap/less/mixins.less";
+@import "../bower_components/bootstrap/less/grid.less";
+@import "../bower_components/bootstrap/less/utilities.less";
+@import "../bower_components/bootstrap/less/wells.less";
+@import "../bower_components/bootstrap/less/panels.less";
+@import "../bower_components/bootstrap/less/buttons.less";
+@import "../bower_components/bootstrap/less/dropdowns.less";
+/*** TODO: to be pointed to controls team AWS cdn ***/
+@import (less) "../vendor/interim-theme/interim-theme.min.css";
+/*** ngen-commom files ***/
+@import (less) "styles/base.less";
+/*** ngen-commom files ***/
+@import (less) "shared/styles/ngen-variables.less";
+@import (less) "shared/styles/ngen-mixins.less";
+@import (less) "shared/styles/ngen-grid.less";
+@import (less) "shared/styles/ngen-popup.less";
+@import (less) "shared/styles/shared.css";
+@import (less) "styles/ngen-sprite.css";
+/*** TODO: Convert all css to less files ***/
+@import (less) "modules/login/styles/login.less";
+// @if BUILD_PIPELINE_ONLY='NO'
+@import (less) "modules/admin/styles/admin.css";
+// @endif
+@import (less) "modules/fieldsearch/styles/fieldsearch.css";
+@import (less) "modules/pipeline/styles/pipeline.less";
+// @if BUILD_PIPELINE_ONLY='NO'
+@import (less) "modules/admin/inputformbuilder/shared/styles/shared.less";
+@import (less) "modules/admin/inputformbuilder/shared/styles/file-upload-control.less";
+// @endif
+@import "modules/pipeline/styles/advance-filter.less";

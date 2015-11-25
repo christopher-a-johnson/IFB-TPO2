@@ -1,0 +1,18 @@
+<div id="formListToolbar">
+  <button class="ngen-admin-fl-import-button import fileUploadBtn" id="ImportButtonToggle">{{fbToolbarCtrl.importButtonName}}<span
+    class="k-icon k-i-arrowhead-e"></span></button>
+  <div ng-show="fbToolbarCtrl.assetLibPage">
+    <div class="dwi dwi-search dwi-search-hov"></div>
+    <input class="search-box  clearable" type=text maxlength="40"
+           ng-model="fbToolbarCtrl.filterText"
+           placeholder='{{fbToolbarCtrl.defaultSearchText}}'
+           ng-change="fbToolbarCtrl.searchFilter()"
+           ngen-search-field-clearable/>
+  </div>
+  <button id="createFormButton" ng-show="fbToolbarCtrl.listPage" ng-click="fbToolbarCtrl.openNewForm()"><span class="k-icon b-new"></span>New Form</button>
+  <button id="openStandardFormButton" ng-show="fbToolbarCtrl.listPage" ng-click="fbToolbarCtrl.standardFormsButtonClick();">
+    <span class="k-icon b-open"></span>Standard Input Forms
+  </button>
+
+  <div formbuilder-file-upload   class="fileUploadDiv" ></div>
+</div>

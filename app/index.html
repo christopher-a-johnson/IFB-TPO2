@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <base href="/dev/"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Encompass Web</title>
+
+  <!-- build:css styles/app.css -->
+  <!-- app:css -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/iedetection.js -->
+  <!-- iedetection:js -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+</head>
+
+<body ng-app="elli.encompass.web" oncontextmenu="return true">
+
+<div id="page-error" class="error-message-box"></div>
+<div class="fs-main-view" ui-view></div>
+
+<div wc-overlay="" wc-overlay-delay="200">
+  <div class="overlay-spinner"><img src="images/spinner.gif"/></div>
+  <div class="overlay-text">Loading</div>
+</div>
+
+<!--[if gte IE 11]> <!-->
+<!-- build:js scripts/vendor.js -->
+<!-- prevendor:js -->
+<!-- endinject -->
+<!-- vendor:js -->
+<!-- endinject -->
+<!-- endbuild -->
+<!--<![endif]-->
+<!--[if gte IE 11]> <!-->
+<!-- build:js scripts/app.js -->
+<!-- app:js -->
+<!-- endinject -->
+<!-- endbuild -->
+<!--<![endif]-->
+</body>
+
+</html>

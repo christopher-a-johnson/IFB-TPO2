@@ -1,0 +1,46 @@
+[
+    {
+        "columns": [
+            { "field": "Title", "width": 200, "title": "Name" },
+            { "field": "Description", "title": "Description" },
+            { "field": "FileSize", "title": "File Size", "freeze": false },
+            { "field": "Public", "title": "Externally Available" },
+            { "field": "LastModifiedBy", "title": "Modified By" },
+            { "field": "LastModifiedDateTime", "title": "Date Modified" },
+            { "field": "Id", "hidden": true }
+        ],
+        "schema": {
+            "id": "Id",
+            "fields": [
+                {
+                    "field": "Id",
+                    "params": { "editable": false, "nullable": false }
+                },
+                {
+                    "field": "Title",
+                    "params": { "type": "string" }
+                },
+                {
+                "field": "Description",
+                "params": { "type": "string" }
+                },
+                {
+                "field": "FileSize",
+                "params": { "type": "string" }
+              },
+                {
+                    "field": "Public",
+                    "params": { "type": "boolean" }
+                },
+                {
+                    "field": "LastModifiedBy",
+                    "params": { "type": "string" }
+                },
+                {
+                    "field": "LastModifiedDateTime",
+                    "params": { "type": "date" }
+                }
+            ]
+        }
+    }
+]

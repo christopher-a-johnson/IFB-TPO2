@@ -1,0 +1,246 @@
+/* Variables starts */
+@skyBlue : #0094ff;
+@orangeRed : #ff4500;
+/* Variables ends */
+
+/* Mixins starts */
+.applyFileTypeImage(){
+  background-image: url('../images/glyphicons-37-file.png');
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+.notificationImageAtLeftCorner(){
+  width: 10px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  right: 1px;
+  top:  2px;
+  height: 10px;
+}
+.forUploadNCancelButton(){
+  position: relative;
+  width: 150px;
+  float: left;
+  margin: 10px;
+  padding: 5px 10px;
+  display: none;
+  &:disabled{
+    opacity: 0.5;
+  }
+}
+/* Mixins ends */
+
+.clearfix {
+  zoom: 1;
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+.dropZone {
+  font-weight: bold;
+  text-align: center;
+  padding: 1em 0;
+  margin: 0px 0px ;
+  color: #555;
+  background-color: #fff;
+  border: 1px dashed #E0E0E0;
+  border-radius: 7px;
+  cursor: default;
+  &.hover{
+    color: #ffffff;
+    background-color: @skyBlue;
+    border-style: solid;
+    box-shadow: inset 0 3px 4px #888;
+  }
+  .supportedFileTypePara {
+    display: inline;
+    color: #999999;
+    font-size: 80%;
+  }
+  .directionWithButtonClass {
+    p {
+      display: inline-block;
+      margin-right: 10px;
+      color: #919193;
+      &:after{
+        content: ' or';
+        font-weight: normal;
+        font-size: 90%;
+        font-style: italic;
+        margin-left: 3px;
+      }
+    }
+  }
+  * {
+    pointer-events: none;
+  }
+  button{
+    pointer-events: all;
+  }
+  .ifb_fileUploadCtrl {
+    display: none;
+  }
+}
+.camouflage   {
+  background-color: transparent !important;
+  border-color:#65999c !important;
+  color: #aaaaaa !important;
+  pointer-events: none;
+}
+.fileUploadBtn {
+  display: inline-block;
+  padding: 3px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid #CEDFE4;
+  border-radius: 4px;
+  color: #333;
+  background-color:#FDFDFD;
+  position: relative;
+  min-width: 100px;
+  margin: 0 auto;
+  &:hover{
+    background-color: #fafafa;
+    color: #222;
+  }
+}
+
+.tileHolder {
+  position: relative;
+  display: table;
+  float: left;
+  width: 23%;
+  margin: 10px;
+  background-color: #F2F8FE;
+  border: 1px solid #CFDFE1;
+  border-radius: 2px;
+  .tile {
+    width: 95%;
+    min-height: 50px;
+    font-size: 80%;
+    .progressBgDiv {
+      position: absolute;
+      background-color: #7CC7E8;
+      width: 0%;
+      height: 100%;
+      opacity: 0.3;
+    }
+    p {
+      width: 100%;
+      margin: 0;
+      display: block;
+      vertical-align: middle;
+      padding: 10px 10px 2px 10px;
+      text-align: left;
+      z-index: 1;
+      .name {
+        word-wrap: break-word;
+        padding: 0 0 0 30px;
+        display: block;
+        height: 2em;
+        color: black;
+
+      }
+      .efrm-file, .js-file, .css-file, .img-file, .default-file {
+        .applyFileTypeImage;
+      }
+    }
+    .errorMessageInTile {
+      color: @orangeRed;
+      text-align: left;
+      margin-top: 5px;
+      padding: 0px 0 0 8px;
+      z-index: 1;
+    }
+    .fileUploadStatusFor {
+      position: absolute;
+      right: 0px;
+      top: 0;
+      padding: 0 4px;
+      margin: 0px 0 0 0;
+      font-size: 12px;
+      z-index: 1;
+      .doneSelection {
+        color: #006400;
+
+      }
+      .crossImageSrc {
+        background-image: url('../images/glyphicons-208-remove-2.png');
+        cursor: pointer;
+        .notificationImageAtLeftCorner;
+      }
+      .exclamationImageSrc {
+        background-image: url('../images/glyphicons-505-alert.png');
+        .notificationImageAtLeftCorner;
+      }
+      .tickImageSrc {
+        background-image: url('../images/glyphicons-207-ok-2.png');
+        .notificationImageAtLeftCorner;
+      }
+    }
+  }
+}
+
+.errorBg {
+  background-color:#FFEDED;
+  border: 1px solid #FF2600;
+}
+
+.import,.uploadButton{
+  &:hover{
+    background-color: #00ADE4;
+    border: 1px solid #139BBD;
+    color: #fff;
+  }
+}
+
+.actionButtonHolder {
+  width: 340px;
+  margin: 0 auto;
+  .uploadButton{
+    .forUploadNCancelButton;
+    background-color: #00A6DA;
+    border: 1px solid #139BBD;
+    color: #fff;
+  }
+  .cancelButton {
+    .forUploadNCancelButton;
+  }
+}
+
+
+
+
+.fileUploadControlHolder {
+  background-color: #F5F6F8;
+  padding: 8px;
+  margin: 15px 0 0 0;
+  border: 1px solid #CFDFE1;
+}
+.import{
+  background-color: #00A6DA;
+  border: 1px solid #139BBD;
+  color: #fff;
+  position: relative;
+  padding: 1px 4px 0 15px;
+  padding-bottom: 0px;
+}
+.import:disabled{
+  opacity: 0.5;
+}
+.import span{
+  margin: -3px 0 0 10px;
+}

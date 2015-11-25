@@ -1,0 +1,45 @@
+[
+  {
+    "field": "LoanNumber",
+    "title": "Loan Number",
+    "datatype": "number"
+  },
+  {
+    "field": "LoanName",
+    "title": "Loan Name",
+    "datatype": "dropdown",
+    "list": [
+      {"name": "RTT8"},
+      {"name": "RTT9"}
+    ]
+  },
+  {
+    "field": "BorrowerName",
+    "title": "Borrower Name",
+    "datatype": "string"
+  },
+  {
+    "field": "LoanAmount",
+    "title": "Loan Amount",
+    "datatype": "number"
+  },
+  {
+    "field": "col5",
+    "title": "Column 5",
+    "datatype": "date"
+  },
+  {
+    "field": "col6",
+    "title": "Column 6",
+    "datatype": "dropdown",
+    "list": [
+      {"name": "col1 data"},
+      {"name": "col6 data"}
+    ]
+  },
+  {
+    "field": "col7",
+    "title": "Column 7",
+    "datatype": "date"
+  }
+]

@@ -1,0 +1,152 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  .font-body;
+}
+
+.font-default {
+  font: normal 0.75em @font-family-primary;
+}
+
+.font-body {
+  .font-default;
+  color: @color-font;
+}
+
+.ngen-text-ellipses {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ngen-multiselect-text {
+  float: left;
+  width: 88%;
+}
+
+.item-selected {
+  background-color: #319CFF;
+  color: white;
+}
+
+.multi-select-select {
+  max-width: 200px;
+  button {
+    min-width: 200px;
+    min-height: 22px;
+    background-color: #EFEFEF;
+    border: 1px solid #CCCCCC;
+    #headerText {
+      width: 150px;
+      text-align: left;
+      font-size: 12px;
+    }
+    .arrow {
+      float: right !important;
+    }
+  }
+  button:hover {
+    background: -webkit-linear-gradient(top, rgb(230, 244, 254) 0%, rgb(182, 227, 248) 92%, rgb(178, 226, 247) 100%);
+    background: -ms-linear-gradient(top, rgb(230, 244, 254) 0%, rgb(182, 227, 248) 92%, rgb(178, 226, 247) 100%);
+    background: -moz-linear-gradient(top, rgb(230, 244, 254) 0%, rgb(182, 227, 248) 92%, rgb(178, 226, 247) 100%);
+    background: linear-gradient(top, rgb(230, 244, 254) 0%, rgb(182, 227, 248) 92%, rgb(178, 226, 247) 100%);
+  }
+  ul {
+    li {
+      display: flex;
+      label {
+        line-height: 20px;
+        div, input {
+          float: left;
+        }
+      }
+      &:hover {
+        .item-selected;
+      }
+    }
+  }
+  .multi-select-popup {
+    margin: 0;
+    background: #fff;
+    border: 1px solid #aaa;
+    z-index: 1010;
+    min-width: 200px;
+    max-width: 100%;
+    padding: 0px;
+    border-radius: 0px;
+    margin-top: 1px;
+    list-style: none;
+    position: fixed;
+    display: table;
+  }
+}
+
+/*Defect:2867 Fix on hover for text-boxes IE*/
+input:focus {
+  border: 1px solid #67afe9;
+}
+
+input {
+  border: 1px lightgrey solid;
+}
+
+.font-disabled {
+  .font-default;
+  color: @color-font-disabled;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.k-button.k-state-disabled,
+.k-button.k-state-disabled:active,
+.k-button.k-state-disabled:hover,
+.k-button[disabled],
+.k-state-disabled .k-button,
+.k-state-disabled .k-button:active,
+.k-state-disabled .k-button:hover {
+  .font-body;
+  .font-disabled;
+}
+
+.k-button {
+  .font-body;
+  font-size: 12px !important;
+  height: @height-input-btn;
+  line-height: 15px !important;
+}
+
+.k-button[disabled]:hover,
+.k-button[disabled]:active {
+  background: @white;
+  border: 1px solid @gray;
+  color: @color-font-disabled;
+}
+
+.k-grid {
+  .font-body;
+  font-size: 16px;
+}
+
+.page-header,
+input,
+input.k-textbox,
+.k-numeric-wrap .k-input {
+  /*below important to override interim css. This will resolve issue input width change on active */
+  font-size: 12px !important;
+}
+
+.ngen-bg-color-transparent {
+  background-color: transparent !important;
+}
+
+.dwi {
+  background-color: transparent;
+}

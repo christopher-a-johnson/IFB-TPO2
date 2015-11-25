@@ -1,0 +1,16 @@
+<div class="login-container" ng-controller="LoginCtrl as vm">
+  <div>
+    <h1>Encompass Web</h1>
+  </div>
+  <br>
+
+  <form class="k-content">
+    <div>
+      <label>User ID</label><input type="text" class="k-textbox" ng-model="vm.cred.UserName"/><br><br>
+      <label>Password</label><input type="password" class="k-textbox" ng-model="vm.cred.Password"/><br><br>
+      <label>Realm</label><input type="text" class="k-textbox" ng-model="vm.cred.Realm"/><br><br>
+      <kendo-button ng-click="vm.login()" id="loginButton">Log In</kendo-button>
+      <kendo-button ng-click="vm.cancel()" id="cancelButton">Cancel</kendo-button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+  {
+   "code":[
+      {"name": "Code Editor", "id": "code1"},
+      { "name": "CSS Editor", "id": "code2"}
+     ],
+    "layout":[
+      {"name": "Add Multiple Grid Panels", "id": "layout1"},
+      {"name": "Add Single Grid Panel", "id": "layout2"}
+    ],
+    "formElement":[
+      {"name": "Text Input Field", "id": "formElement1"},
+      {"name": "Dropdown", "id": "formElement2"},
+      {"name": "Text Area Input", "id": "formElement3"},
+      {"name": "Radio", "id": "formElement4"},
+      {"name": "Text Button", "id": "formElement5"},
+      {"name": "Checkbox", "id": "formElement6"},
+      {"name": "Image Button", "id": "formElement7"}
+    ],
+    "miscellaneousElement":[
+      {"name": "Date Picker", "id": "miscellaneousElement1"},
+      {"name": "Image", "id": "miscellaneousElement2"},
+      {"name": "Container", "id": "miscellaneousElement3"},
+      {"name": "Paragraph", "id": "miscellaneousElement4"}
+    ]
+
+  }

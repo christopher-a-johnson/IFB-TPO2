@@ -1,0 +1,29 @@
+<div class="ngen-admin-panelbar">
+  <ul kendo-panel-bar>
+    <li>System Setup</li>
+    <li>System Administration</li>
+    <li ng-controller="FormBuilderCtrl as vm">Developer Tools
+      <ul>
+        <li><a href="">Custom Input Forms</a>
+          <ul>
+            <li><a href="" ng-click="vm.showFormList()">Custom Input Form List Page</a></li>
+          </ul>
+        </li>
+        <li><a href="">Asset Library</a>
+          <ul>
+            <li><a href="" ng-click="vm.showImages()">Images</a></li>
+            <li><a href="" ng-click="vm.showScripts()">Scripts</a></li>
+            <li><a href="" ng-click="vm.showStyles()">Style Sheets</a></li>
+          </ul>
+        </li>
+        <li><a href="">Plugins</a></li>
+        <li><a href="">Custom Data Objects</a></li>
+        <li><a href="">Packages</a></li>
+      </ul>
+    </li>
+    <li>Troubleshooting</li>
+    <li>Encompass Updates</li>
+  </ul>
+</div>
+<div class="ngen-admin-detail fbpage" ui-view></div>
+

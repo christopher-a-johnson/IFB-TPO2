@@ -1,0 +1,19 @@
+<div class="ngen-popup-content-container ngen-message-popup" ngen-key-navigation close-on-escapekey-action="true">
+  <div class="confirmation-window">
+    <div class="popup-content-body">
+      <div ng-switch="vm.icon" class="ngen-pull-left">
+        <div ng-switch-when="Infoicon" class="ngen-pull-left dwi dwi-info-32x32 ngen-popup-icon"></div>
+        <div ng-switch-default></div>
+      </div>
+      <div class="ngen-popup-text ngen-pull-left">
+        <span class="ng-binding ngen-pull-left ngen-vertical-middle">{{vm.message}}</span>
+      </div>
+    </div>
+    <div class="popup-content-footer">
+      <div ng-show="vm.displayApplyToAll" class="ngen-pull-left">
+        <input type="checkbox" ng-model="vm.applyCheck"> {{vm.checklabel}}
+      </div>
+      <button class="k-button" type="button" ng-click="vm.infoModalOkClick()" tabindex="1">OK</button>
+    </div>
+  </div>
+</div>

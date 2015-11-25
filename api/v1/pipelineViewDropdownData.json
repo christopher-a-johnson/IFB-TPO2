@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Loan Officer - Default View",
+    "type": "System",
+    "isDefault": false,
+    "pipelineView": "Default View",
+    "persona": "Loan Officer"
+  },
+  {
+    "id": 2,
+    "title": "Loan Opener - Default View",
+    "type": "System",
+    "isDefault": false,
+    "pipelineView": "Default View",
+    "persona": "Loan Opener"
+  },
+  {
+    "id": 3,
+    "title": "Loan Processor - Default View",
+    "type": "System",
+    "isDefault": false,
+    "pipelineView": "Default View",
+    "persona": "Loan Processor"
+  },
+  {
+    "id": 4,
+    "title": "Super Administrator - Default View",
+    "type": "System",
+    "isDefault": true,
+    "pipelineView": "Default View",
+    "persona": "Super Administrator"
+  },
+  {
+    "id": 5,
+    "title": "Underwriter - Default View",
+    "type": "System",
+    "isDefault": false,
+    "pipelineView": "Default View",
+    "persona": "Underwriter"
+  },
+  {
+    "id": 6,
+    "title": "some really long view name, named by crazy person like Abhishek",
+    "type": "System",
+    "isDefault": false,
+    "pipelineView": "Default View",
+    "persona":"Test Persona"
+  }
+]

@@ -1,0 +1,25 @@
+<div id="divMultiFileUpload" class="fileUploadControlHolder">
+</div>
+<script id="metaDataTemplate" type="text/x-kendo-template">
+  <div class="metaDataDetails">
+    <input class="fileName" type="text" id="FormName_#=guid#" maxlength="100" name="FormName_#=guid#"
+           value="#=fileName#" placeholder="#=fileNamePlaceHolder#"
+            required/>
+    <span id="DuplicateFileName_#=guid#" class="duplicateErrorMsg clearfix"></span>
+    <textarea class="formDescription" maxlength="500" id="Description_#=guid#"
+             placeholder="#=fileDescriptionPlaceHolder#"></textarea>
+    <span class="maxAllowedChars" id="MaxAllowedChars_#=guid#"></span>
+  </div>
+  <div class="div-switch-container">
+    <span id="formEnabledField_#=guid#">
+      <span class="span-enable-form">
+       <span class="enabledText"><label id="lblEnableForm_#=guid#">Enabled :</label></span>
+        <input type="checkbox" name="formEnabled_#=guid#" id="formEnabled_#=guid#" value="false" class="input-switch-margin"/>
+      </span>
+      </span>
+  </div>
+</script>
+<script id="saveCloseTemplate" type="text/x-kendo-template">
+  <button class="saveClose closeButton" id="closeButton">Close</button>
+  <button class="saveClose saveButton" id="saveButton" disabled>Save</button>
+</script>

@@ -1,0 +1,343 @@
+/*Common CSS classes for modal popups*/
+.ngen-popup-content-container {
+  width: 100%;
+  padding: 8px 8px 14px;
+  box-sizing: border-box;
+  float: left;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  p, div, button, .k-grid td {
+    font-size: 12px;
+  }
+
+  /*Removes default padding of 0.58em for popup content*/
+  div.k-window-content {
+    padding: 0;
+  }
+
+  .k-grid-header th.k-header {
+    font-size: 12px;
+  }
+
+  .ngen-bordered-container {
+    width: @width100pcent;
+    float: left;
+    border: 1px solid #93a2b1;
+  }
+
+  .popup-content-header, .ngen-full-width {
+    width: 100%;
+  }
+  .ngen-popup-label {
+    margin-bottom: 6px;
+  }
+
+  .popup-content-body {
+    float: left;
+    padding: 8px;
+    width: 100%;
+
+    /*hide a column's header in Kendo UI grid*/
+    .ngen-pl-cc-grid-container {
+      overflow: hidden;
+      width: 100%;
+    }
+    .ngen-pl-af-grid-container {
+      width: 100%;
+      height: 447px;
+    }
+  }
+  .popup-content-footer {
+    padding: 14px 6px 0px 14px;
+    width: 100%;
+    text-align: right;
+    float: right;
+    &.delete-button-footer {
+      padding: 4px 6px 0px 14px;
+    }
+    button {
+      min-width: 61px;
+    }
+    button:first-child {
+      margin-right: 6px;
+      border: 1px solid grey;
+    }
+    button:last-child {
+      margin-right: 0;
+      border: 1px solid grey;
+    }
+  }
+
+  .k-grid td {
+    line-height: 8px;
+    overflow: hidden;
+    padding: 3px 5px 1px 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ngen-popup-checkbox {
+    margin: 0 3px 0 0;
+  }
+
+  .k-widget,
+  .k-widget * {
+    box-sizing: content-box;
+  }
+
+  .popup-option-row {
+    float: left;
+    line-height: 20px;
+    padding: 4px 0;
+    width: 100%;
+  }
+
+  ///************Distinct popup styling overrides******************///
+  /*customize-column*/
+  .customize-columns-window {
+    .ngen-pl-cc-grid-container {
+      height: 279px;
+    }
+    .ngen-pl-cc-search-input {
+      width: 453px;
+      height: 22px;
+      margin: -1px 0 4px 0;
+    }
+    .ngen-pl-cc-search-button {
+      margin: -1px 0 4px 0;
+    }
+    .ngen-margin-left-5px {
+      margin-left: 5px;
+    }
+    .customize-columns-grid {
+      margin-top: -18px;
+    }
+  }
+
+  /*add field window*/
+  .add-field-window {
+    .ngen-bordered-container {
+      width: 100%;
+    }
+    .ngen-pl-af-search-input {
+      width: 420px;
+      height: 22px;
+      margin: -1px 0 5px 5px;
+      padding-left: 5px;
+    }
+    .ngen-pl-af-search-button {
+      margin: -1px 0 4px 0;
+    }
+    .ngen-margin-left-5px {
+      margin-left: 5px;
+    }
+    .ngen-pl-af-lbl {
+      font-weight: bold;
+      margin-top: 3px;
+    }
+  }
+
+  /*manage-view*/
+  .manage-view-window {
+    .ngen-pl-cc-grid-container {
+      height: 300px;
+    }
+    .popup-content-header {
+      line-height: 21px;
+    }
+    .ngen-bordered-container {
+      width: 100%;
+    }
+    .manage-view-grid {
+      overflow: hidden;
+      height: 280px;
+    }
+    .k-separator {
+      background: none repeat scroll 0 0 #888;
+      display: inline-block;
+      height: 22px;
+      margin: 0 4px;
+      vertical-align: top;
+      width: 1px;
+    }
+  }
+
+  /*loan-alert*/
+  .loan-alert-window {
+    float: left;
+    width: 100%;
+
+    .grid-content {
+      height: 272px;
+      overflow: hidden;
+    }
+    .popup-content-body {
+      padding: 0;
+      height: 334px;
+      width: 100%;
+    }
+
+    .popup-content-footer {
+      .alert-snooze-dropdown {
+        margin: 0 8px 0 0;
+      }
+      p {
+        margin: 4px 9px 0 0;
+      }
+      padding: 10px 0 0 0;
+      text-align: left;
+      float: left;
+      button:first-child {
+        margin-right: 0;
+      }
+      .ngen-snooze-ctrls-container {
+        width: 316px;
+      }
+    }
+  }
+
+  /*loan-duplicate*/
+  .duplicate-loan-window {
+    .popup-content-body {
+      padding: 0;
+      min-height: 351px;
+    }
+
+    .duplicate-loan-controls-group {
+      margin-bottom: 17px;
+    }
+
+    .duplicate-loan-label {
+      padding: 5px;
+    }
+  }
+
+  /*move-folder-window*/
+  .move-folder-window {
+    .popup-content-body {
+      float: none;
+    }
+  }
+
+  /*save-view-window*/
+  .save-view-window {
+    .popup-content-body {
+      padding: 0;
+      height: 353px;
+    }
+    .popup-text-content {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      margin-left: 6px;
+    }
+  }
+
+  /*rename-view-window*/
+  .rename-view-window {
+    .popup-content-body {
+      min-height: 0;
+    }
+    .ngen-viewname-label {
+      margin-right: 10px;
+      line-height: 20px;
+    }
+    .ngen-view-name-input-box {
+      width: 296px;
+      margin-bottom: 6px;
+    }
+  }
+
+  /*rebuild-load-properties-window*/
+  .rebuild-load-properties-window {
+    .popup-content-body {
+      .popup-option-row:first-child {
+        padding-top: 0;
+      }
+      .ngen-label {
+        width: 25%;
+        float: left;
+      }
+    }
+  }
+}
+
+/* tpo-companies-window */
+.tpo-companies-window {
+  padding: 1px;
+  .ngen-pl-tc-grid-container {
+    height: 200px;
+  }
+}
+
+.ngen-small-popup {
+  .popup-content-body {
+    width: 100%;
+    min-height: 127px;
+    padding: 12px 6px 0 6px;
+  }
+  .popup-content-footer {
+    padding: 14px 6px 0;
+  }
+}
+
+.ngen-message-popup {
+  padding: 1px;
+  .popup-content-body {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    .ngen-popup-text {
+      height: 32px;
+    }
+    .ngen-popup-icon {
+      margin-right: 8px;
+    }
+    .ngen-popup-text-icon {
+      width: 80%;
+      height: 32px;
+    }
+  }
+  .popup-content-footer {
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+    float: right;
+    button {
+      margin-right: 8px;
+    }
+    button:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/* formbuilder delete assets*/
+.assets-columns-window {
+  .used-frm-heading {
+    padding: 0;
+    font-weight: bold;
+    line-height: 25px;
+  }
+  .used-frm-warning {
+    padding-left: 5px;
+    font-weight: bold;
+
+  }
+  .used-frm-warning-img {
+    height: 20px;
+    width: 24px;
+    margin: 7px 0 0 0;
+  }
+  .used-frm-columns-grid {
+    width: 100%;
+    margin: -16px 0 0 -1px;
+  }
+  .k-widget {
+    box-sizing: content-box;
+    border-bottom: white;
+  }
+}

@@ -1,0 +1,71 @@
+.error-message-box {
+  width: 95%;
+  color: red;
+  overflow: hidden;
+  word-wrap: break-word;
+  display: inline;
+  font-family: Arial;
+  font-size: 10px;
+}
+
+.error-message-padding {
+  padding-left: 5px;
+}
+
+.info {
+  color: blue !important;
+  font-family: Arial;
+  font-size: 10px;
+}
+
+/*
+Start
+styles for info
+*/
+.ngen-right-align {
+  float: right;
+}
+
+/*
+End
+*/
+.nav-color {
+  background-color: rgb(231, 231, 231);
+}
+
+.row > * {
+  box-sizing: border-box !important;
+}
+
+.k-grid-header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div.k-window-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.ngen-vertical-middle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ngen-no-padding {
+  padding: 0 !important;
+}
+
+.ngen-pull-left {
+  float: left !important;
+}
+
+.ngen-pull-right {
+  float: right !important;
+}
+
+.ms-dropdown-list-item {
+  vertical-align: top;
+}

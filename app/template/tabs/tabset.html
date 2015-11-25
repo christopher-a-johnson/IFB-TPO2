@@ -1,0 +1,9 @@
+<div class="k-widget k-header k-tabstrip">
+  <ul class="k-tabstrip-items k-reset ngen-fs-tabstrip-backcolor ngen-lower-right-tab-strip" ng-transclude
+      ng-class="{ 'ngen-active-tab-margin' : tabs.length === 1}"></ul>
+  <div class="k-content ngen-fs-tabstrip-grid"
+       ng-repeat="tab in tabs"
+       ng-class="{'k-state-active': tab.active}"
+       tab-content-transclude="tab">
+  </div>
+</div>

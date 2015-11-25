@@ -1,0 +1,139 @@
+<div id="analysistool-kendo" class="fs-main-page" ng-controller="FieldSearchCtrl as vm" oncontextmenu="return false">
+
+
+  <div id="kendoSplitter" kendo-splitter
+       k-panes="[{collapsible: true},{collapsible: true}]"
+       k-orientation="'vertical'"
+       k-on-resize="vm.resizeKendoSplitter()"
+       style="height:100%;">
+
+    <div field-search-splitter id="top-content-kendo">
+      <div class="analysisleftupper-kendo">
+        <div class="fs-full-height">
+          <div class="section-header fs-search-section-header" id="fieldIdTitle">Search Field IDs</div>
+          <div class="fs-search-input-section">
+            <form ng-submit="submit()">
+              <div class="fs-input-section">
+                <div class="fs-clearall-container">
+                  <span class="clearall-span">
+                    <a class="clearall" href ng-click="vm.clearAll()">Clear All</a>
+                  </span>
+                </div>
+                <div class="fs-input-container"><input class="k-textbox fs-input-text-box clearable" type=text
+                                                       ng-model="vm.searchFieldsKendo.id1"
+                                                       placeholder='Search Field ID'
+                                                       field-search-enterkey='vm.searchFieldFnForRestApi()'
+                                                       field-search-clearable/>
+
+                  <div class="fsa-search-icon dwi dwi-search dwi-search-hov"
+                       ng-click="vm.findSearchFieldID('id1')"></div>
+                  <div class="fsa-input-section-operator">and</div>
+                </div>
+
+                <div class="fs-input-container"><input class="k-textbox fs-input-text-box clearable" type="text"
+                                                       ng-model="vm.searchFieldsKendo.id2"
+                                                       ng-change="vm.switchFields(searchFieldsKendo.id2)"
+                                                       placeholder='Search Field ID'
+                                                       field-search-enterkey='vm.searchFieldFnForRestApi()'
+                                                       field-search-clearable/>
+
+                  <div class="fsa-search-icon dwi dwi-search dwi-search-hov"
+                       ng-click="vm.findSearchFieldID('id2')"></div>
+                  <div class="fsa-input-section-operator">and</div>
+                </div>
+
+                <div class="fs-input-container"><input class="k-textbox fs-input-text-box clearable" type="text"
+                                                       ng-model="vm.searchFieldsKendo.id3"
+                                                       placeholder='Search Field ID'
+                                                       field-search-enterkey='vm.searchFieldFnForRestApi()'
+                                                       field-search-clearable/>
+
+                  <div class="fsa-search-icon dwi dwi-search dwi-search-hov"
+                       ng-click="vm.findSearchFieldID('id3')"></div>
+                </div>
+
+                <div class="searchinput">
+                  &nbsp;&nbsp;&nbsp;
+                  <button class="k-button btn btn-default" ng-click="vm.searchFieldFnForRestApi()"
+                          id="searchKendoButton">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="section-header">
+            Search History For Current Session
+          </div>
+          <div class="searchhistory-kendo">
+            <div id="searchHistoryGrid1" class="fs-search-history"
+                 kendo-grid="vm.searchHistoryGrid"
+                 k-data-source="vm.searchHistory"
+                 k-options="vm.searchHistoryOptions(dataItem)"
+                 k-rebind="vm.searchHistoryOptions(dataItem)"
+                 ng-click="vm.searchHistoryClicked($event)"
+                 ng-keydown="vm.searchHistoryClicked($event)"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analysisrightupper-kendo">
+        <div class="fs-full-height">
+          <div class="section-header fs-results-section-header">Results: {{vm.resultTitle}}</div>
+          <div id="upperGrid1" class="k-grid k-widget fs-upper-grid" data-kendo-grid="vm.upperGrid"
+               k-options="vm.upperGridOptions(dataItem)"
+               k-rebind="vm.upperGridOptions(dataItem)"
+               k-data-source="vm.searchResultData"
+               ng-keydown="vm.onKeynavigation($event)"
+               ng-keyup="vm.onKeynavigation($event)"
+               k-navigatable=true
+               k-selectable=true
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="analysislower-kendo" ng-show="vm.showLower" class="fs-detail-results-section">
+      <div class="section-header fs-results-details-section-header">
+        {{vm.bottomTextAreaTitle}}
+      </div>
+      <div ng-class="vm.lowerLeftGridDisplay" class="fs-rule-details">
+        <div ng-show="vm.showChannel" class="fs-rule-details-channel">
+          {{vm.channel}}
+          <br/><br/>
+          {{vm.ruleCondition}}.
+          <br/><br/>
+          Conditional Fields:
+          <span ng-repeat="field in vm.conditionFields track by $index">
+            <a class="conditional-fields-style" ng-click="vm.conditionalFieldsClicked(field)">{{field}}</a>
+            ({{vm.fieldIdDescs[$index]}})
+            <span ng-hide="$last">{{', '}}</span>
+          </span>
+          <br/><br/>
+          Result Fields:
+          <span ng-repeat="field in vm.resultFields track by $index">
+            <a class="conditional-fields-style" ng-click="vm.conditionalFieldsClicked(field)">{{field}}</a>
+            ({{vm.resultFieldIdDesc[$index]}})
+            <span ng-hide="$last">{{', '}}</span>
+          </span>
+        </div>
+        <div ng-show="vm.showOthers" class="fs-rule-details-others" ng-class="vm.analysisShowOthersHtml"
+             ng-bind-html="vm.textHtml"></div>
+      </div>
+
+      <div class="analysislowerright-kendo k-tabstrip-wrapper" ng-show="vm.showGrid">
+        <tabset class="ngen-fs-bottom-tabs">
+          <tab class="fs-lower-right-tabs" ng-repeat="tab in vm.fieldTabs" select="vm.resizeKendoSplitter();">
+            <div id="fs-lower-right-grid" ng-if="tab.fieldData" class="k-grid k-widget fs-lower-right-grid-div"
+                 kendo-grid k-data-source="tab.fieldData" k-columns="{{tab.fieldColumns}}"></div>
+            <tab-heading class="fs-lower-right-tabs heading">Field ID {{tab.fieldId}}</tab-heading>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>
+

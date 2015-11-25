@@ -1,0 +1,102 @@
+{
+  "name": "elli.encompass.web.drysdaleWeb",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "3.1.1",
+    "jquery": "1.11.1",
+    "lodash": "3.9.3",
+    "angular": "1.3.0",
+    "angular-sanitize": "1.3.0",
+    "angular-local-storage": "0.1.3",
+    "angular-bootstrap": "0.10.0",
+    "angular-ui-router": "0.2.10",
+    "restangular": "1.5.1",
+    "AngularOverlay": "DanWahlin/AngularOverlay",
+    "ngDraggable": "0.1.8",
+    "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4.5",
+    "restful.js": "~0.6.2",
+    "angular-animate": "1.3.2"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": []
+    },
+    "AngularOverlay": {
+      "main": [
+        "app/directives/wcAngularOverlay.js"
+      ]
+    },
+    "angular-hotkeys": {
+      "main": [
+        "build/hotkeys.js"
+      ]
+    }
+  },
+  "preen": {
+    "bootstrap": [
+      "bower.json",
+      "less/*.less",
+      "dist/fonts/*.*"
+    ],
+    "jquery": [
+      "bower.json",
+      "dist/jquery.js"
+    ],
+    "restful": [
+      "bower.json",
+      "dist/restful.min.js"
+    ],
+    "angular": [
+      "bower.json",
+      "angular.js"
+    ],
+    "angular-animate": [
+      "bower.json",
+      "angular-animate.js"
+    ],
+    "angular-sanitize": [
+      "bower.json",
+      "angular-sanitize.js"
+    ],
+    "angular-local-storage": [
+      "bower.json",
+      "dist/angular-local-storage.js"
+    ],
+    "angular-bootstrap": [
+      "bower.json",
+      "ui-bootstrap-tpls.js"
+    ],
+    "angular-ui-router": [
+      "bower.json",
+      "release/angular-ui-router.js"
+    ],
+    "restangular": [
+      "bower.json",
+      "dist/restangular.js"
+    ],
+    "AngularOverlay": [
+      "bower.json",
+      "app/directives/wcAngularOverlay.js"
+    ],
+    "lodash": [
+      "bower.json",
+      "lodash.js"
+    ],
+    "angular-mocks": [
+      "bower.json",
+      "angular-mocks.js"
+    ],
+    "ngDraggable": [
+      "bower.json",
+      "ngDraggable.js"
+    ],
+    "angular-hotkeys": [
+      "bower.json",
+      "build/hotkeys.css",
+      "build/hotkeys.js"
+    ]
+  },
+  "devDependencies": {
+    "angular-mocks": "1.3.0"
+  }
+}
