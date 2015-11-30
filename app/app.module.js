@@ -35,7 +35,7 @@
 
   angular.module('elli.encompass.web').constant('ENCOMPASSWEBCONSTANTS', {
     SESSION_ID: 'SessionId',
-    DEFAULT_STATE: 'pipeline',
+    DEFAULT_STATE: 'admin',
     LOGIN_STATE: 'login',
     AUTH_EXPIRED_WARNING: 'Connection to Encompass server lost. Log in again to continue.'
   });

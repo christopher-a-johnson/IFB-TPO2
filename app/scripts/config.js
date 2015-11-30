@@ -3,7 +3,7 @@
 
   var NGEN_CONSTANTS = {
     ENV: 'DEV',
-    RESTURL: 'http://ed1vweui0001.dco.elmae:85/v1',
+    RESTURL: 'http://eq1vweui0001.dco.elmae:85/v1',
     OSBRESTURL: 'http://encompass-ea.dev.dco.elmae/v2'
   };
 

@@ -21,9 +21,9 @@
 
     function cancel() {
       vm.cred = {
-        UserName: null,
-        Password: null,
-        Realm: null
+        UserName: 'devadmin',
+        Password: 'password',
+        Realm: 'qa15210000363'
       };
     }
   }
