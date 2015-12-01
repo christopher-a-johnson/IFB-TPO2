@@ -13,7 +13,7 @@
     'elli.encompass.web.fieldsearch',
     'elli.encompass.web.templates',
     'modalServiceModule',
-    'elli.encompass.web.pipeline',
+    /*'elli.encompass.web.pipeline',*/
     // @if BUILD_PIPELINE_ONLY='NO'
     'elli.encompass.web.admin',
     // @endif
