@@ -46,9 +46,9 @@
       .pipe($.if(args.verbose, $.print(function (path) {
         return 'templates : ' + path;
       })))
-      .pipe($.minifyHtml({
+      /*.pipe($.minifyHtml({
         empty: true
-      }))
+      }))*/
       .pipe($.angularTemplatecache(
         config.templateCache.file,
         config.templateCache.options
@@ -235,7 +235,7 @@
 
   gulp.task('build-dev', function (done) {
     log('Building development files');
-    $.runSequence('clean', ['vet-dev', 'less', 'templates'], 'inject', done);
+    $.runSequence('clean', [/*'vet-dev',*/ 'less', 'templates'], 'inject', done);
   });
 
   gulp.task('serve', function (done) {
@@ -386,7 +386,7 @@
     var karma = require('karma').server;
     var karmaConfig = require('karma/lib/config').parseConfig(path.resolve(__dirname, 'karma.conf.js'), {});
     karmaConfig.singleRun = !!singleRun;
-    karmaConfig.browsers = args.ci ? ['PhantomJS'] : ['PhantomJS', 'Chrome'];
+    karmaConfig.browsers = args.ci ? ['PhantomJS'] : ['PhantomJS'/*, 'Firefox'*/];
     if (args.prod) {
       karmaConfig.files = ['build/scripts/vendor.js', 'bower_components/angular-mocks/angular-mocks.js',
         'build/scripts/app.js', config.app + '**/**_test.js'];
