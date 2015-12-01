@@ -14,7 +14,7 @@
     modRewrite = require('connect-modrewrite');
 
   // Input Form Builder Build
-  require('./app/modules/admin/inputformbuilder/builder/gulpfile.js');
+  //require('./app/modules/admin/inputformbuilder/builder/gulpfile.js');
 
   /* modular build for 15.2 release */
   if (!!args.pipeline) {
