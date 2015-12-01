@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('elli.encompass.web.pipeline').controller('ErrorModalController', ErrorModalController);
+  angular.module('elli.encompass.web.shared').controller('ErrorModalController', ErrorModalController);
 
   /* @ngInject */
   function ErrorModalController(modalWindowService, customMessage) {

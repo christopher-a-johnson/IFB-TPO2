@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('elli.encompass.web.pipeline').controller('WarningModalController', WarningModalController);
+  angular.module('elli.encompass.web.shared').controller('WarningModalController', WarningModalController);
 
   /* @ngInject */
   function WarningModalController(modalWindowService, customMessage, PipelineDataStore, popupIcon) {

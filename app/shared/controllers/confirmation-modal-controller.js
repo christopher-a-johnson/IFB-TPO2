@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  angular.module('elli.encompass.web.pipeline').controller('ConfirmationModalController', ConfirmationModalController);
+  angular.module('elli.encompass.web.shared').controller('ConfirmationModalController', ConfirmationModalController);
   function ConfirmationModalController(modalWindowService, customMessage, PipelineDataStore, popupIcon,
                                        SetMenuStateService) {
     var vm = this;

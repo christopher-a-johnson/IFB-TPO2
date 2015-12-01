@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('elli.encompass.web.pipeline').controller('PopupInformationController', PopupInformationController);
+  angular.module('elli.encompass.web.shared').controller('PopupInformationController', PopupInformationController);
 
   /* @ngInject */
   function PopupInformationController(modalWindowService, options) {
