@@ -10,7 +10,7 @@
     'LocalStorageModule',
     'elli.encompass.web.config',
     'elli.encompass.web.login',
-    'elli.encompass.web.fieldsearch',
+    // 'elli.encompass.web.fieldsearch',
     'elli.encompass.web.templates',
     'modalServiceModule',
     /*'elli.encompass.web.pipeline',*/
