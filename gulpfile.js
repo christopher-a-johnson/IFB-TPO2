@@ -330,7 +330,7 @@
     /* setup common watches */
     gulp.watch(config.allStyles, ['less']).on('change', changeEvent);
     gulp.watch(config.templates, ['templates', browserSync.reload]).on('change', changeEvent);
-    gulp.watch(config.alljs, ['vet-dev']).on('change', changeEvent);
+    // gulp.watch(config.alljs, ['vet-dev']).on('change', changeEvent);
 
     if (!isDev) {
       gulp.watch(config.tmp + '**/*.*', ['optimize', browserSync.reload]).on('change', changeEvent);
